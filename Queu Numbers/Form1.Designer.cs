@@ -171,6 +171,7 @@
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton7.Enabled = false;
             this.radioButton7.Location = new System.Drawing.Point(3, 189);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(211, 27);
@@ -184,6 +185,7 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton6.Enabled = false;
             this.radioButton6.Location = new System.Drawing.Point(3, 158);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(211, 25);
@@ -197,6 +199,7 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton5.Enabled = false;
             this.radioButton5.Location = new System.Drawing.Point(3, 127);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(211, 25);
@@ -210,6 +213,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton4.Enabled = false;
             this.radioButton4.Location = new System.Drawing.Point(3, 96);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(211, 25);
@@ -223,6 +227,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton3.Enabled = false;
             this.radioButton3.Location = new System.Drawing.Point(3, 65);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(211, 25);
@@ -236,6 +241,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(3, 34);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(211, 25);
@@ -249,6 +255,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Location = new System.Drawing.Point(3, 3);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(211, 25);

@@ -13,9 +13,11 @@ namespace Queu_Numbers
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        login logs;
+        public Form1(login lgn)
         {
             InitializeComponent();
+            this.logs = lgn;
         }
 
         private string ipAddress = "192.168.4.109";
@@ -55,7 +57,6 @@ namespace Queu_Numbers
                     client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(2));
                     await Task.Delay(8000);
                     label1.Text = incrementedNumber.ToString();
-                    this.Enabled = true;
 
                 }
                 else
@@ -66,6 +67,10 @@ namespace Queu_Numbers
             catch (Exception ex)
             {
                 textBox1.Text += $"Error: {ex.Message}" + Environment.NewLine;
+            }
+            finally
+            {
+                this.Enabled = true;
             }
         }
 
@@ -97,10 +102,61 @@ namespace Queu_Numbers
             catch
             {
                 MessageBox.Show($"Error: Queuing Main System is currently not running" + Environment.NewLine);
+                //this.Close();
             }
         }
+
+        private void limits()
+        {
+            string vl = this.Text;
+
+            switch (vl)
+            {
+                case "FLOI":
+                    radioButton1.Enabled = true;
+                    radioButton2.Enabled = true;
+                    radioButton3.Enabled = true;
+                    radioButton4.Enabled = true;
+                    radioButton5.Enabled = true;
+                    radioButton6.Enabled = true;
+                    radioButton7.Enabled = true;
+                    radioButton1.Checked = true;
+                    break;
+                case "EMESIL":
+                    radioButton1.Enabled = true;
+                    radioButton1.Checked = true;
+                    break;
+                case "JOMARY":
+                    radioButton2.Enabled = true;
+                    radioButton4.Enabled = true;
+                    radioButton4.Checked = true;
+                    break;
+                case "HELEN":
+                    radioButton3.Enabled = true;
+                    radioButton3.Checked = true;
+                    break;
+                case "NIKKI":
+                    radioButton4.Enabled = true;
+                    radioButton6.Enabled = true;
+                    radioButton4.Checked = true;
+                    break;
+                case "DON":
+                    radioButton5.Enabled = true;
+                    radioButton5.Checked = true;
+                    break;
+                case "FRECHIE":
+                    radioButton7.Enabled = true;
+                    radioButton7.Checked = true;
+                    break;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = logs.textBox1.Text.ToUpper();
+            limits();
+            
+
             try {
                 radioButton1.Checked = true;
             client = new SimpleTcpClient();
