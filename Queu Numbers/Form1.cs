@@ -35,6 +35,7 @@ namespace Queu_Numbers
                 if (int.TryParse(label1.Text, out int number))
                 {
                     label1.Text = "***";
+                    this.Enabled = false;
                     await Task.Delay(1000);
 
                     int incrementedNumber = number;
@@ -52,8 +53,10 @@ namespace Queu_Numbers
                     string message = $"{c1}:" + incrementedNumber.ToString();
 
                     client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(2));
-                    await Task.Delay(5000);
+                    await Task.Delay(8000);
                     label1.Text = incrementedNumber.ToString();
+                    this.Enabled = true;
+
                 }
                 else
                 {
